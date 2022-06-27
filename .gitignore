@@ -1,2 +1,6 @@
 *.opendb
+out/*
+.vs/
+CMakeLists.txt
+CMakePresets.json
 
