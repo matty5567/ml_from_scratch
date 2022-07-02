@@ -3,4 +3,6 @@ out/*
 .vs/
 CMakeLists.txt
 CMakePresets.json
-
+data/
+*.out
+*.o
