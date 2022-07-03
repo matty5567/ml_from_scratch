@@ -1,6 +1,6 @@
 
-main: main.o reader.o
-	g++ main.o reader.o -o MNIST.out
+main: main.o reader.o math.o
+	g++ main.o reader.o math.o -o MNIST.out
 	./MNIST.out
 
 main.o: main.cpp
@@ -8,3 +8,6 @@ main.o: main.cpp
 
 reader.o: reader.cpp
 	g++ -c reader.cpp
+
+math.o: math.cpp
+	g++ -c math.cpp
