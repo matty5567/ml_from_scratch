@@ -13,7 +13,10 @@ public:
 
 	static mat matmul(mat a, mat b);
 
-	static mat add(mat a, std::vector<float> b);
+	static mat addBias(mat a, float b);
+
+
+	static mat relu(mat x);
 
 private:
 	Math (){};

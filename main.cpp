@@ -7,13 +7,13 @@
 
 int main() {
 
-//	std::vector<image> train_images = read_images("data/train-images-idx3-ubyte");
+	std::vector<image> train_images = read_images("data/train-images-idx3-ubyte");
 //	std::vector<image> test_images  = read_images("data/t10k-images-idx3-ubyte");
 
 //	std::vector<uint8_t> test_labels = read_labels("data/t10k-labels-idx1-ubyte");
-//	std::vector<uint8_t> train_labels = read_labels("data/train-labels-idx1-ubyte");
+	std::vector<uint8_t> train_labels = read_labels("data/train-labels-idx1-ubyte");
 
-//	assert (train_images.size() == train_labels.size());
+	assert (train_images.size() == train_labels.size());
 //	assert (test_images.size()  == test_labels.size());
 
 
@@ -28,16 +28,13 @@ int main() {
 						{6.0f, 12.0f}};
 
 
-	mat d = Math::matmul(a, b);
+//	mat d = Math::matmul(a, b);
 
-	for (int i=0; i<2; i++)
-	{
-		for (int j=0; j<2; j++)
-		{
-			std::cout << c[i][j] << " " << d[i][j] << std::endl;
-//			assert(c[i][j] == d[i][j]);
-		}
-	}
+
+// img dim 28 x 28 = 784 inputs to first layer
+//
+//
+//
 
 }
 

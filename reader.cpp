@@ -14,6 +14,7 @@ int reverseINT(int i)
 }
 
 
+
 std::vector<uint8_t> read_labels(const std::string& file_loc)
 {
 	std::ifstream file;
@@ -75,21 +76,16 @@ std::vector<image> read_images(const std::string& file_loc)
 		n_cols = reverseINT(n_cols);
 
 
-		std::vector<std::vector<std::vector<uint8_t>>> images;
+		std::vector<std::vector<uint8_t>> images;
 
 		for (int i=0; i<num_images; i++)
 		{
-			std::vector<std::vector<uint8_t>> image;
-			for (int j=0; j<n_rows; j++)
+			std::vector<uint8_t> image;
+			for (int j=0 ; j<n_rows*n_cols; j++)
 			{
-				std::vector<uint8_t> row;
-				for (int k=0; k<n_cols; k++)
-				{
 					uint8_t px = 0;
 					file.read((char *)&px, sizeof(char));
-					row.push_back(px);
-				}
-				image.push_back(row);
+					image.push_back(px);
 			}
 		images.push_back(image);
 		}

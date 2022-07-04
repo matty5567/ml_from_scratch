@@ -5,7 +5,7 @@
 #include <vector>
 
 
-typedef std::vector<std::vector<uint8_t>> image;
+typedef std::vector<uint8_t> image;
 
 int reverseINT(int i);
 
